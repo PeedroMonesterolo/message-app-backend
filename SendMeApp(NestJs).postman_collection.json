@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "5c70fe7e-faa7-4a61-99ff-ec00d0820f80",
+		"name": "SendMeApp(NestJs)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREAR MENSAJE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mensaje\": \"Hola NestJs 4\",\r\n    \"nick\": \"Pedro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/{{MENSAJES}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{MENSAJES}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OBTENER LISTADO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{MENSAJES}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{MENSAJES}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACTUALIZAR MENSAJE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mensaje\": \"Hola NestJs 1\",\r\n    \"nick\": \"Pedro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/{{MENSAJES}}/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{MENSAJES}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ELIMINAR MENSAJE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{MENSAJES}}/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{MENSAJES}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
